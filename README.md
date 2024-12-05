@@ -1,6 +1,16 @@
 # ryconvert
 
-ryconvert is a shell script which finds .flac and .alac files in a local directory, then converts them to 16-bit 44.1kHz .alac files for use with an iPod.
+ryconvert is a shell script which finds .flac and ALAC files in a local directory, then converts them to 16-bit 44.1kHz ALAC files for use with an iPod. This script should be compatible with all UNIX-based systems with ffmpeg installed and in your PATH.
+
+## Dependencies
+
+ffmpeg
+
+## Usage
+
+Running the command without arguments will find all .flac and ALAC files in the current working directory, and convert all files to 16-bit 44.1kHz ALAC while presering album artwork and tag information. The original files will be moved to a new directory within the current working directory, "Originals".
+
+Note: If the script detects .m4a which were encoded using AAC as opposed to ALAC, the script will leave the files as-is, since converting a non-lossless file to a lossless format provides no benefits.
 
 ## Why not 24-bit?
 
